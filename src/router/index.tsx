@@ -1,9 +1,18 @@
-import React from 'react'
-import RouterView from './RouterView'
-import config from './routerConfig'
-import {BrowserRouter} from 'react-router-dom'
-export default()=>{
-    return <BrowserRouter>
-      <RouterView routes={config.routes}/>
-    </BrowserRouter>
-} 
+
+
+// 获取范型接口
+
+import {IRouterConfig} from "./index.d"
+
+// 引入路由计算组件
+import RouterView from "./RouterView"
+
+import * as React from "react"
+
+
+const RootRouter=({routes}:IRouterConfig)=>{
+    // 引入数据计算组件传参 传入泛型接口
+    return  <RouterView routes={routes}/>
+}
+
+export default RootRouter
