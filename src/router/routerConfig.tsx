@@ -1,10 +1,11 @@
 import React from 'react'
 import RouterView from './RouterView'
+import Login from '../view/login/login'
 export default{
     routes:[
         {
             path:'/login',
-            component:()=><p>登录页面</p>
+            component:Login
         },
         {
             path:'/main',
@@ -21,6 +22,10 @@ export default{
                     {
                         path:'/main/classify',
                         component:()=><p>分类</p>
+                    },
+                    {
+                        path:'/main/only',
+                        component:()=><p>专题</p>
                     },
                     {
                         path:'/main/cart',
