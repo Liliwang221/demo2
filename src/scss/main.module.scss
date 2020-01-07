@@ -1,0 +1,25 @@
+:local {
+    .main {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .bodys {
+            width: 100%;
+            flex: 1;
+            overflow: hidden;
+        }
+        footer {
+            width: 100%;
+            height: 60px;
+            border-top: 1px solid #ccc;
+            box-shadow: 0 -3px 8px #ccc;
+            ul {
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+            }
+        }
+    }
+}

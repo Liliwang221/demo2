@@ -1,5 +1,5 @@
 import React from 'react'
-import Cart from './cart'
+import Classify from './module/classify';
 export default {
-    cart:new Cart()
+    classify:new Classify()
 }

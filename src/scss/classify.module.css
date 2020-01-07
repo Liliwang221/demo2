@@ -1,0 +1,115 @@
+:local .classify {
+  width: 100%;
+  height: 100%;
+  background: #ccc;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+:local .classify .search {
+  width: 100%;
+  height: 44px;
+  background: #fff;
+  line-height: 44px;
+  padding: 0 20px;
+  border-bottom: 2px solid #ccc;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  left: 0;
+}
+
+:local .classify .search input {
+  width: 100%;
+  height: 30px;
+  background: #eee;
+  text-align: center;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  color: #ccc;
+}
+
+:local .classify .wrapper {
+  width: 100%;
+  background: #fff;
+  display: flex;
+  overflow-y: auto;
+}
+
+:local .classify .wrapper .leftWrap {
+  width: 30%;
+}
+
+:local .classify .wrapper .leftWrap ul {
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+}
+
+:local .classify .wrapper .leftWrap ul li {
+  width: 100%;
+  height: 40px;
+  line-height: 50px;
+  text-align: center;
+}
+
+:local .classify .wrapper .leftWrap ul .active {
+  border-left: 2px solid #5FB3F6;
+}
+
+:local .classify .wrapper .rightWrap {
+  width: 70%;
+  height: 100%;
+  border-left: 1px solid #ccc;
+  overflow: scroll;
+}
+
+:local .classify .wrapper .rightWrap .imgWrap {
+  width: 100%;
+  height: 100px;
+  position: relative;
+}
+
+:local .classify .wrapper .rightWrap .imgWrap img {
+  width: 100%;
+  height: 100%;
+}
+
+:local .classify .wrapper .rightWrap .imgWrap span {
+  position: absolute;
+  left: 30%;
+  top: 45%;
+  color: #fff;
+}
+
+:local .classify .wrapper .rightWrap .titleWrap {
+  width: 100%;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  color: #5FB3F6;
+}
+
+:local .classify .wrapper .rightWrap .shangpinImg {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+:local .classify .wrapper .rightWrap .shangpinImg .shangpin {
+  width: 50%;
+  text-align: center;
+}
+
+:local .classify .wrapper .rightWrap .shangpinImg .shangpin img {
+  width: 90%;
+  height: 110px;
+  padding: 10px;
+}
+
+:local .classify .wrapper .rightWrap .shangpinImg .shangpin p {
+  width: 100%;
+  text-align: center;
+}
