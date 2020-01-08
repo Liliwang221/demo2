@@ -36,7 +36,7 @@
   overflow-y: auto;
 }
 
-:local .cart footer {
+:local .cart .footer {
   width: 100%;
   height: 60px;
   background: #fff;
@@ -46,19 +46,19 @@
   align-items: center;
 }
 
-:local .cart footer .chooice {
+:local .cart .footer .chooice {
   width: 25px;
   height: 25px;
   background-image: url(../img/2.png);
 }
 
-:local .cart footer .active {
+:local .cart .footer .active {
   width: 25px;
   height: 25px;
   background-image: url(../img/3.png);
 }
 
-:local .cart footer .del {
+:local .cart .footer .del {
   width: 133px;
   height: 100%;
   background: #AB2B2B;

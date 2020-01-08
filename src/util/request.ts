@@ -1,33 +1,35 @@
 
-import axios from 'axios'
-const instance = axios.create({
-  baseURL:'http://localhost:8888'
-})
+import axios from 'axios';
 
-const getNewHeaders = () =>{
-  return {'x-nideshop-token': window.localStorage.getItem('token')}
-}
-export default class HttpUtil {
-  static get (url: string, params = {}) {
-    return new Promise((resolve, reject) => {
-      instance.get(url, { params, headers: getNewHeaders() },).then(({ data }) => {
-        if(data.errno === 0){
-          resolve(data.data)
-        }else{
-          resolve(data)
-        }
-      }).catch((err) => {
-        reject({ err: JSON.stringify(err) })
-      })
-    })
-  }
-  static post (url: string, params = {}) {
-    return new Promise((resolve, reject) => {
-      instance.post(url, { ...params },{headers: getNewHeaders()}).then(({ data }) => {
-        resolve(data)
-      }).catch((err) => {
-        reject({ err: JSON.stringify(err) })
-      })
-    })
-  }
-}
+// 创建axios实例
+const instance = axios.create({
+    baseURL: '//127.0.0.1:8888',
+    timeout: 1000,
+    // headers: {'X-Custom-Header': 'foobar'}
+});
+
+// 请求拦截器
+instance.interceptors.request.use(function(config) {
+    // Do something before request is sent
+    return config;
+}, function(error) {
+    // Do something with request error
+    return Promise.reject(error);
+});
+
+// 响应拦截器
+instance.interceptors.response.use(function(response) {
+    // Do something with response data
+    // return response;
+    if (response.status === 200) {
+        return response.data;
+    } else {
+      
+    }
+}, function(error) {
+    // Do something with response error
+  
+    // return Promise.reject(error);
+});
+
+export default instance;

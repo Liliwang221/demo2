@@ -1,4 +1,4 @@
-export interface Cart{
+export interface CartList{
     id:number,
     user_id:number,
     goods_name:string,

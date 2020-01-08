@@ -7,5 +7,5 @@ export interface ClassifyList{
     img_url:string,
     front_name:string,
     wap_banner_url: string;
-    subCategoryList:[],
 }
+
