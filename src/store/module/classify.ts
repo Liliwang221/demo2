@@ -6,6 +6,8 @@ import {getListData} from "../../api/classifyApi"
 export default class Classify {
     @observable
     list: ClassifyList[] = []
+    @observable
+    indexInfo:number=0
     // data: ShangpinData[]=[]
 
     @action

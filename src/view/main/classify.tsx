@@ -1,17 +1,21 @@
 import React, { useEffect } from 'react'
 import style from "../../scss/classify.module.scss"
 import useStore from '../../util/useStore'
-
+interface Props {
+    id:number,
+    name:string,
+    wap_banner_url:string
+}
 const Classify: React.FC<any>= (props) => {
-    // let {data,setData}=useStore()
     let store = useStore();
     let { classify } = store
     useEffect(() => {
         classify.getListData()
     })
 //左侧点击
-let dataClickFn=(e: React.MouseEvent<HTMLLIElement, MouseEvent>,item:object)=>{
-console.log("7777777777777",e,item)
+let dataClickFn=(e: React.MouseEvent<HTMLLIElement, MouseEvent>,item:object,index:number)=>{
+    store.classify.indexInfo=index
+console.log("777777",e,item,store.classify.indexInfo)
 }
 //点击搜索框
 let tiaoClickFn=()=>{
@@ -19,19 +23,22 @@ let tiaoClickFn=()=>{
 }
     return (
         <div className={style.classify}>
+            {/* 头部搜索框 */}
             <div className={style.search}>
                 <input type="text" placeholder="搜索商品，共239款好物" onClick={()=>tiaoClickFn()}/>
             </div>
             <div className={style.wrapper}>
+                {/* 左侧 */}
                 <div className={style.leftWrap}>
                     <ul>
                         {
                             classify.list.map((item, index) => {
-                                return <li key={index} className={style.active} onClick={e=>dataClickFn(e,item)}>{item.name}</li>
+                                return <li key={index} className={`${store.classify.indexInfo===index?style.active:""}`} onClick={e=>dataClickFn(e,item,index)}>{item.name}</li>
                             })
                         }
                     </ul>
                 </div>
+                {/* 右侧 */}
                 <div className={style.rightWrap}>
                     {
                         classify.list.map((item, index) => {

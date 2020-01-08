@@ -11,7 +11,7 @@ import NavSearch from "../view/module/navSearch"
 
 import Home from "../view/main/home"
 import Only from "../view/main/only"
-import Car from "../view/main/cart"
+import Cart from "../view/main/cart"
 import My from "../view/main/my"
 import Classify from "../view/main/classify"
 /**
@@ -49,8 +49,8 @@ const RouterConfig:IRouterItem[]=[
            },
            {
             type:"route",
-            path:'/main/car',
-            component:Car,
+            path:'/main/cart',
+            component:Cart,
             children:[]
            },
            {
