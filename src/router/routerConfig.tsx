@@ -1,47 +1,49 @@
 import React from 'react'
-import RouterView from './RouterView'
 import Login from '../view/login/login'
-export default{
-    routes:[
+import Main from '../view/main/main'
+import Home from '../view/main/home'
+import Classify from '../view/main/classify'
+import Only from '../view/main/special'
+import Cart from '../view/main/cart'
+import My from '../view/main/my'
+
+export default {
+    routes: [
         {
-            path:'/login',
-            component:Login
+            path: '/login',
+            component: Login
         },
         {
-            path:'/main',
-            component:(props:any)=>(
-                <>
-                <p>主页面</p>
-                <RouterView routes={props.routes}></RouterView>
-                </>),
-                children:[
-                    {
-                        path:'/main/home',
-                        component:()=><p>首页</p>
-                    },
-                    {
-                        path:'/main/classify',
-                        component:()=><p>分类</p>
-                    },
-                    {
-                        path:'/main/only',
-                        component:()=><p>专题</p>
-                    },
-                    {
-                        path:'/main/cart',
-                        component:()=><p>购物车</p>
-                    },
-                    {
-                        path:'/main/my',
-                        component:()=><p>我的</p>
-                    },
-                ]
-               
-            
+            path: '/main',
+            component: Main,
+            children: [
+                {
+                    path: '/main/home',
+                    component: Home
+                },
+                {
+                    path: '/main/classify',
+                    component: Classify
+                },
+                {
+                    path: '/main/only',
+                    component: Only
+                },
+                {
+                    path: '/main/cart',
+                    component: Cart
+                },
+                {
+                    path: '/main/my',
+                    component: My
+                },
+            ]
+
+
         },
         {
-            from:'*',
-            to:'/login'
+            from: '*',
+            to: '/login'
         }
     ]
 }

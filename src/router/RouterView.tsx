@@ -1,5 +1,6 @@
 import * as React from 'react';
 import {Switch,Redirect,Route} from 'react-router-dom'
+
 interface ItemType{
     path?:string,
     component?:any,
@@ -10,7 +11,8 @@ interface ItemType{
 interface PropType{
     routes:ItemType[]
 }
-export default(props:PropType)=>{
+export default (props:PropType)=>{
+    // console.log(props.routes)
     return <Switch>
         {
             props.routes.map((item:ItemType,index)=>{

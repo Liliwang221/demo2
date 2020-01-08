@@ -1,5 +1,11 @@
 import React from 'react'
 import Cart from './cart'
+import Login from './Login'
+import Home from './Home'
+import Special from './special'
 export default {
-    cart:new Cart()
+    cart:new Cart(),
+    Login:new Login(),
+    Home:new Home(),
+    Special:new Special()
 }

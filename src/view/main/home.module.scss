@@ -1,0 +1,260 @@
+.home{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    // overflow: scroll;
+    overflow-x:hidden ;
+    // overflow: auto;
+    background: rgba(236, 234, 234, 0.973);
+}
+.img img{
+    width: 100%;
+    height: 12rem;
+}
+.first{
+    width: 100%;
+    height: 5.6em;
+    background: #fff;
+    display: flex;
+    // flex-direction: column;
+}
+.pictureRoot img{
+    width: 2.0em;
+    height: 2.0em;
+}
+.picture{
+    margin: 23px;
+}
+.pictureName{
+  margin-left: 3px;
+  font-size: 12px;
+}
+// e{
+//  width: 100%;
+//  height: 3.2rem;
+
+//  padding-left: 7.6rem;
+//  padding-top: 1.2rem;
+// }
+.secondName{
+    height: 3rem;
+    background: #fff;
+    text-align: center;
+    font-size: 1rem;
+    line-height: 3rem;
+    font-weight: 700;
+}
+.secondPicture{
+    width: 100%;
+    height: 15rem;
+   display: flex;
+  flex-wrap: wrap;
+
+}
+.secondPictureRoot img{
+    // width: 21em;
+    width: 100%;
+    height: 100%;
+    max-height: 12em;
+    
+   
+}
+.secondPictureRoot{
+    width: 11.7rem;
+    display: flex;
+    max-height: 10rem;
+    flex-wrap: wrap;
+    position: relative;
+}
+.secondList{
+    position: absolute;
+    top: .4rem;
+    left: .4rem;
+}
+.secondList p:nth-child(1){
+    font-size: 1rem;
+    font-weight: 500;
+}
+.secondList p:nth-child(2){
+    font-size: .8em;
+    color: #ccc;
+}
+.newGoodBox{
+    background: #fff;
+}
+.newGoodWrap{
+    display: flex;
+    flex-wrap: wrap;
+}
+.newGoodTitle{
+    height: 3rem;
+    background: #fff;
+    text-align: center;
+    font-size: 1rem;
+    line-height: 3rem;
+    font-weight: 700;
+}
+.newGoodItem{
+    width: 50%;
+    height: 12rem;
+}
+.newGoodItem img{
+    width: 100%;
+    height: 70%;
+}
+.newGoodName{
+    margin-left: 1.5em;
+}
+.newGoodPrice{
+    margin-left: 4.2em;
+    color: red;
+    font-weight: 400;
+}
+.hotGoodBox{
+    margin-top: 0.8em;
+    background: #fff;
+}
+.hotGoodTitle{
+    height: 3rem;
+    background: #fff;
+    text-align: center;
+    font-size: 1rem;
+    line-height: 3rem;
+    font-weight: 700;
+    border-bottom: 1px solid #888;
+}
+.hotGoodWrap{
+    width: 100%;
+    padding: 0 .8rem;
+    min-height: 200px;
+}
+.hotGoodItem{
+    height: 8rem;
+    position: relative;
+    padding: .3rem 0;
+    display: flex;
+    border-bottom: 1px solid #888;
+}
+.hotGoodItem img{
+    width: auto;
+    height: 100%;
+}
+.hotGoodList{
+    flex: 1 1;
+    padding: 1rem 0;
+}
+.hotGoodList p{
+    padding: .5rem 0;
+}
+.hotGoodList p:nth-child(1){
+    font-weight: 500;
+    font-size: 1rem;
+}
+.hotGoodList p:nth-child(2){
+    font-weight: 300;
+    font-size: 1rem;
+}
+.hotGoodList p:nth-child(3){
+    font-weight: 300;
+    font-size: 1rem;
+    color: red;
+}
+.topGoodBox{
+    margin-top: 0.8em;
+    background: #fff;
+}
+.topGoodTitle{
+    height: 3rem;
+    background: #fff;
+    text-align: center;
+    font-size: 1rem;
+    line-height: 3rem;
+    font-weight: 700;
+    border-bottom: 1px solid #888;
+}
+.topGoodWrap{
+    width: 100%;
+    padding: 0 .8rem;
+    min-height: 200px;
+    display: flex;
+    overflow-x: auto;
+}
+.topGoodItem{
+    height: 12rem;
+    position: relative;
+    padding: .2rem 0;
+    margin-left: 0.3em;
+    // display: flex;
+    // border-bottom: 1px solid #888;
+}
+.topGoodItem img{
+    width: auto;
+    height: 100%;
+}
+.topGoodList p:nth-child(2){
+    max-width: 400px;
+    overflow: hidden;
+    // background: #999;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 1rem;
+    color: #888;
+}
+.topGoodName{
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+.topGoodPrice{
+    font-size: 1.2rem;
+    color: red;
+    margin-left: 0.5em;
+}
+.cateGoodBox{
+    background: #fff;
+}
+.cateGoodItem{
+    display: flex;
+    flex-wrap: wrap;
+}
+.cateItemList{
+    display: flex;
+    flex-wrap: wrap;
+}
+.cateGoodTitle{
+    height: 3rem;
+    text-align: center;
+    width: 100%;
+    line-height: 3rem;
+    background: #f0f0f0;
+}
+.cateGoodListItem{
+    width: 45%;
+    height: auto;
+    background: #fff;
+    padding: .5rem;
+   
+
+}
+.cateGoodListItem .cateGoodImg img{
+width: 100%;
+height: auto;
+}
+.cateLast{
+    width: 45%;
+    height: auto;
+    background: #fff;
+    padding: .5rem;
+   
+}
+.cateLast p:nth-child(1){
+    width: 100%;
+    text-align: center;
+    margin-top: 3.5em;
+}
+.cateLast p:nth-child(2) img{
+    padding: 1rem;
+    height: 2em;
+    width: 2rem;
+    margin-left: 3rem;
+}
