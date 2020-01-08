@@ -31,7 +31,10 @@ const Cart: React.FC = () => {
                 </ul>
             </header>
             <main>
-
+                <div className={style.box}>
+                    <div className={style.wrp}></div>
+                    <div className={style.imgs}></div>
+                </div>
             </main>
             <footer className={style.footer}>
                 <div className={style.chooice} onClick={() => allElection()}><img src=""/></div>
