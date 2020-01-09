@@ -1,16 +1,38 @@
-import React from 'react'
-import {LoginList} from './type/Loginify'
-import {observable,action,computed} from 'mobx'
-import {getLoginData} from '../api/login'
-export default class LoginStore{
-    @observable
-    list: LoginList[] = [];
+import { observable, action } from 'mobx'
 
+import { login } from "../api/login"
+
+class LoginStore {
+
+    @observable
+    user: string = "15323807318"
+
+    @observable pwd: string = "123456"
+
+    @observable
+    userInfo: Object = {}
 
     @action
-   async  getLoginData(obj:object){
-     const res:any=await getLoginData(obj);
-     console.log(res)
-     this.list=res.data
- } 
+    changeUser(val: string) {
+        this.user = val
+    }
+
+    @action
+    changePwd(val: string) {
+        this.pwd = val
+    }
+
+    @action
+    async login() {
+        let params = {
+            mobile: this.user,
+            password: this.pwd
+        }
+
+        let res = await login(params)
+        this.userInfo = res.data
+
+    }
 }
+
+export default LoginStore
