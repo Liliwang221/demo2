@@ -10,7 +10,7 @@ class LoginStore {
     @observable pwd: string = "123456"
 
     @observable
-    userInfo: Object = {}
+    jump: Object = {}
 
     @action
     changeUser(val: string) {
@@ -30,7 +30,9 @@ class LoginStore {
         }
 
         let res = await login(params)
-        this.userInfo = res.data
+        // console.log(res)
+        this.jump = res.data
+        // console.log(res.data)
 
     }
 }

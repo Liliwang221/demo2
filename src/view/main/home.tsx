@@ -1,14 +1,20 @@
 import React, { useEffect } from 'react'
 import styleHome from '../main/home.module.scss'
 // import useState from '../../util/useStore'
+
 import { useObserver } from "mobx-react-lite"
 import useStore from '../../util/useStore'
-let Home: React.FC = () => {
+let Home: React.FC<any> = (props) => {
     let store = useStore();
     let { Home } = store
     useEffect(() => {
         Home.getHomeData()
     }, [Home])
+    const detail=(id:string)=>{
+        console.log(id)
+        localStorage.setItem('id',id)
+        props.history.push('./detail')
+    }
     return useObserver(() => (
         <div className={styleHome.home}>
             {/* 轮播图系列 */}
@@ -19,7 +25,7 @@ let Home: React.FC = () => {
             <div className={styleHome.contain}>
                 <div className={styleHome.first}>
                     {
-                        Home.homeList.map((item, index) => {
+                        Home.data.channel.map((item, index) => {
                             return <div className={styleHome.picture} key={index}>
                                 <p className={styleHome.pictureRoot}>  <img src={item.icon_url} alt="" /></p>
                                 <p className={styleHome.pictureName}>{item.name}</p>
@@ -33,8 +39,8 @@ let Home: React.FC = () => {
                 <p className={styleHome.secondName}>品牌制造供应商</p>
                 <div className={styleHome.secondPicture}>
                     {
-                        Home.brandList.map((item, index) => {
-                            return <div className={styleHome.secondPictureRoot} key={index}>
+                        Home.data.brandList.map((item, index) => {
+                            return <div className={styleHome.secondPictureRoot} key={index} onClick={()=>{detail(item.id)}}>
                                 <img src={item.new_pic_url} alt="" />
                                 <div className={styleHome.secondList}>
                                     <p>{item.name}</p>
@@ -50,7 +56,7 @@ let Home: React.FC = () => {
                 <p className={styleHome.newGoodTitle}>新品首发</p>
                 <div className={styleHome.newGoodWrap}>
                     {
-                        Home.newGoodList.map((item, index) => {
+                        Home.data.newGoodsList.map((item, index) => {
                             return <div className={styleHome.newGoodItem} key={index}>
                                 <img src={item.list_pic_url} alt="" />
                                 <div className={styleHome.newGoodList}>
@@ -67,7 +73,7 @@ let Home: React.FC = () => {
                 <p className={styleHome.hotGoodTitle}>人气推荐</p>
                 <div className={styleHome.hotGoodWrap}>
                     {
-                        Home.hotGoodList.map((item, index) => {
+                        Home.data.hotGoodsList.map((item, index) => {
                             return <div className={styleHome.hotGoodItem} key={index}>
                                 <img src={item.list_pic_url} alt="" />
                                 <div className={styleHome.hotGoodList}>
@@ -85,7 +91,7 @@ let Home: React.FC = () => {
                 <p className={styleHome.topGoodTitle}>专题精选</p>
                 <div className={styleHome.topGoodWrap}>
                     {
-                        Home.topGoodList.map((item, index) => {
+                        Home.data.topicList.map((item, index) => {
                             return <div className={styleHome.topGoodItem} key={index}>
                                 <img src={item.item_pic_url} alt="" />
                                 <div className={styleHome.topGoodList}>
@@ -102,7 +108,7 @@ let Home: React.FC = () => {
                 {/* <p className={styleHome.cateGoodTitle}>专题精选</p> */}
                 <div className={styleHome.cateGoodWrap}>
                     {
-                        Home.cateGoryList.map((item, index) => {
+                        Home.data.categoryList.map((item, index) => {
                             return <div className={styleHome.cateGoodItem} key={index}>
                                 <p className={styleHome.cateGoodTitle}>{item.name}</p>
                                 <div className={styleHome.cateItemList}>

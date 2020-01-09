@@ -6,6 +6,7 @@ import Classify from '../view/main/classify'
 import Only from '../view/main/special'
 import Cart from '../view/main/cart'
 import My from '../view/main/my'
+import Detail from '../view/main/detail'
 
 export default {
     routes: [
@@ -37,6 +38,10 @@ export default {
                     path: '/main/my',
                     component: My
                 },
+                {
+                    path: '/main/detail',
+                    component: Detail
+                }
             ]
 
 

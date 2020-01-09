@@ -13,7 +13,7 @@ const Special:React.FC=()=>{
         <div className={styleSpecial.special}>
           <div className={styleSpecial.container}>
               {
-                  Special.specialList.map((item,index)=>{
+                  Special.dataList.data.map((item,index)=>{
                     return <div className={styleSpecial.dataList} key={index}>
                   <p><img src={item.scene_pic_url} alt=""/></p>
                  <div className={styleSpecial.dataItem}>

@@ -2,18 +2,20 @@ import React from 'react'
 // import {homeList} from './type/homeify'
 import {observable,action,computed} from 'mobx'
 import {getSpecialData} from '../api/special'
-interface ItemType{
-    specialList:any
-}
+
+import { SpecialType } from '../util/special'
+
 export default class HomeStore{
     @observable
-    specialList:any[]=[]
+    dataList: SpecialType = {
+        data:[]
+    }
    
     @action
    async  getSpecialData(){
-     const res:any=await getSpecialData();
+     const res =await getSpecialData();
      console.log(res)
-     this.specialList=res.data
+     this.dataList=res.data
     
  } 
 }
