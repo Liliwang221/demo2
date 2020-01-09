@@ -1,8 +1,8 @@
 import React from "react"
-import { ClassifyList } from "../types/classify"
+import { ClassifyList } from "./type/classify"
 // import { RightList } from '../types/rightType';
 import { observable, action, computed } from "mobx"
-import { getListData, getRightData } from "../../api/classifyApi"
+import { getListData, getRightData } from "../api/classifyApi"
 
 
 export default class Classify {

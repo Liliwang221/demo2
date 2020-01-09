@@ -49,13 +49,11 @@
 :local .cart .footer .chooice {
   width: 25px;
   height: 25px;
-  background-image: url(../img/2.png);
 }
 
 :local .cart .footer .active {
   width: 25px;
   height: 25px;
-  background-image: url(../img/3.png);
 }
 
 :local .cart .footer .del {

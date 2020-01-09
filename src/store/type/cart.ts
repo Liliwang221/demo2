@@ -5,5 +5,4 @@ export interface CartList{
     goods_sn:string,
     goods_id:number,
     list_pic_url: string;
-    
 }

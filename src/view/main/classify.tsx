@@ -18,6 +18,11 @@ const Classify: React.FC<any> = (props) => {
     let tiaoClickFn = () => {
         props.history.push("/navSearch")
     }
+    //点击商品
+    let interestFn=(id:number)=>{
+        console.log(123456,id)
+        props.history.push({pathname:"/interest/"+id,params:{id:id}})
+    }
     return useObserver(() => (
         <div className={style.classify}>
             {/* 头部搜索框 */}
@@ -51,7 +56,7 @@ const Classify: React.FC<any> = (props) => {
                         <div className={style.shangpinImg}>
                             {
                               store.classify.RightList.subCategoryList.map((item:any,index:any)=>{
-                                  return <div className={style.shangpin} key={index}>
+                                  return <div className={style.shangpin} key={index} onClick={()=>interestFn(item.id)}>
                                   <img src={item.wap_banner_url}/>
                                   <p>{item.name}</p>
                               </div>

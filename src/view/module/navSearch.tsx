@@ -1,6 +1,6 @@
 import React from 'react'
 import style from "../../scss/navSearch.module.scss"
-
+import "../../icon图标淘宝/font_5rhyeqzz879/iconfont.css"
 interface Props {
     
 }
@@ -13,13 +13,13 @@ const navSearch: React.FC<any> = (props) => {
         <div className={style.navSearch}>
             <div className={style.header}>
                 <span onClick={()=>returnClickFn()}>&lt;</span>
-                <input type="text" placeholder="520元礼包抢先领"/>
+                <input type="text"  className="iconfont" placeholder="&#xe65c; 520元礼包抢先领"/>
                 <p>取消</p>
                 <img src="" alt=""/>
             </div>
             <div className={style.historyBox}>
                 <div className={style.record}>
-                    <p>历史记录</p><span>删除</span>
+                    <p>历史记录</p><span className="iconfont">&#xe6b4;</span>
                 </div>
                 <ul>
                     <li>母情节</li>

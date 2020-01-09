@@ -1,0 +1,24 @@
+.dataList{
+    width: 100%;
+    height: 17rem;
+    background: #fff;
+}
+.dataList p:nth-child(1) img{
+    width: 100%;
+    height: 12rem;
+}
+.dataItem{
+    text-align: center;
+}
+.dataItem p:nth-child(2){
+    width: 90%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-left: 1rem;
+    font-size: .8rem;
+    color: #cccaca;
+}
+.dataItem p:nth-child(3){
+    color: red;
+}

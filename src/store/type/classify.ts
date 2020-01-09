@@ -8,4 +8,3 @@ export interface ClassifyList{
     front_name:string,
     wap_banner_url: string;
 }
-

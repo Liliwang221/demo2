@@ -1,7 +1,7 @@
 import React from "react"
 import { observable, action, computed } from "mobx"
-import { CartList } from "../types/cart"
-import { getCartData } from "../../api/cartApi"
+import { CartList } from "./type/cart"
+import { getCartData } from "../api/cartApi"
 
 export default class Carts {
     @observable
@@ -11,6 +11,6 @@ export default class Carts {
     async getCartData() {
         const res: any = await getCartData()
         console.log("res.........", res)
-        this.list = res.cartList
+        // this.list = res.cartList
     }
 }

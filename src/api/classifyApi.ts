@@ -7,5 +7,3 @@ export let getListData=()=>{
 export let getRightData=(id:string)=>{
     return request.get('/catalog/current',{params:{id}})
 }
-
-
