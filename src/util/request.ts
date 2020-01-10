@@ -4,9 +4,9 @@ import {XHRType} from './type'
 
 // 创建axios实例
 const instance = axios.create({
-    baseURL: '//169.254.156.252:8888',
+    baseURL: 'http://127.0.0.1:8888',
     timeout: 3000,
-    // headers: {'X-Custom-Header': 'foobar'}
+    headers: {'X-Custom-Header':localStorage.getItem("token") }
 });
 
 // 请求拦截器

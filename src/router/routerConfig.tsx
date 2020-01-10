@@ -7,8 +7,10 @@ import Only from '../view/main/special'
 import Cart from '../view/main/cart'
 import My from '../view/main/my'
 import Detail from '../view/main/detail'
+
 import NavSearch from "../view/module/navSearch"
 import Interesting from '../view/module/interesting';
+import Collection from "../view/module/collection"//收藏
 
 export default {
     routes: [
@@ -23,6 +25,9 @@ export default {
            },{
                path:"/interest",
                component:Interesting
+           },{
+               path:"/collection",
+               component:Collection
            },
         {
             path: '/main',

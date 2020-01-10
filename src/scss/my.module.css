@@ -1,0 +1,70 @@
+:local .my {
+  width: 100%;
+  height: 100%;
+}
+
+:local .my .box {
+  width: 100%;
+  height: 25%;
+  background-image: url(http://yanxuan.nosdn.127.net/d069279e5834bbca17065a9855a014bf.png);
+  background-size: 100% 100%;
+}
+
+:local .my .box .headportrait {
+  width: 80px;
+  height: 80px;
+  display: flex;
+}
+
+:local .my .box .headportrait img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  margin: 40% 0 0 30%;
+}
+
+:local .my .box .headportrait .info {
+  margin: 50% 0 0 20%;
+  color: #fff;
+}
+
+:local .my .box .headportrait .info p {
+  line-height: 35px;
+}
+
+:local .my .context {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+:local .my .context .txt {
+  width: 33.3%;
+  height: 125px;
+  border: 1px solid #ccc;
+  text-align: center;
+}
+
+:local .my .context .txt span {
+  color: #666;
+  font-size: 30px;
+  line-height: 70px;
+}
+
+:local .my .context .txt:nth-of-type(1) {
+  border: 1px solid #2196F3;
+  color: #2196F3;
+}
+
+:local .my .context .txt:nth-of-type(1) span {
+  color: #2196F3;
+}
+
+:local .my .context .txt:nth-of-type(2) {
+  border: 1px solid #2196F3;
+  color: #2196F3;
+}
+
+:local .my .context .txt:nth-of-type(2) span {
+  color: #2196F3;
+}

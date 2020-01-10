@@ -20,11 +20,10 @@ const Classify: React.FC<any> = (props) => {
     }
     //点击商品
     let interestFn=(id:number)=>{
-        console.log(123456,id)
         props.history.push({pathname:"/interest/"+id,params:{id:id}})
     }
     return useObserver(() => (
-        <div className={style.classify}>
+        <div className={style.classify}>    
             {/* 头部搜索框 */}
             <div className={style.search}>
                 <input type="text" placeholder="搜索商品，共239款好物" onClick={() => tiaoClickFn()} />

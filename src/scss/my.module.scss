@@ -1,0 +1,60 @@
+:local {
+    .my {
+        width: 100%;
+        height: 100%;
+        .box {
+            width: 100%;
+            height: 25%;
+            background-image: url(http://yanxuan.nosdn.127.net/d069279e5834bbca17065a9855a014bf.png);
+            background-size: 100% 100%;
+            .headportrait {
+                width: 80px;
+                height: 80px;
+                display: flex;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 50%;
+                    margin: 40% 0 0 30%;
+                }
+                .info {
+                    margin: 50% 0 0 20%;
+                    color: #fff;
+                    p {
+                        line-height: 35px;
+                    }
+                }
+            }
+        }
+        .context {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            .txt {
+                width: 33.3%;
+                height: 125px;
+                border: 1px solid #ccc;
+                text-align: center;
+                span {
+                    color: #666;
+                    font-size: 30px;
+                    line-height: 70px;
+                }
+            }
+            .txt:nth-of-type(1) {
+                border: 1px solid #2196F3;
+                color: #2196F3;
+                span {
+                    color: #2196F3;
+                }
+            }
+            .txt:nth-of-type(2) {
+                border: 1px solid #2196F3;
+                color: #2196F3;
+                span {
+                    color: #2196F3;
+                }
+            }
+        }
+    }
+}
