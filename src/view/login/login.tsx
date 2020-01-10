@@ -15,7 +15,7 @@ const Login:React.FC=()=>{
       Login.login()
      console.log(Login.login)
      if (Login.jump && Object.values(Login.jump).length > 0) {
-      history.push('/main')
+      history.push('/main/home')
     } else {
       alert("您输入的信息有误！")
     }

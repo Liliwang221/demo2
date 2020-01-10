@@ -11,11 +11,20 @@ interface Detail {
       app_list_pic_url: string,
       is_new: number,
       new_pic_url: string,
-      new_sort_order: number
+      new_sort_order: number,
+     
+}
+interface Store {
+    id: string,
+    name: string,
+    list_pic_url: string,
+    retail_price: number
+     
 }
 
 export interface DetailType {
  data: Detail[],
+ store:Store[]
 
 }
 export interface XHRType {

@@ -3,6 +3,7 @@ import {useHistory} from 'react-router-dom'
 import style from '../main/detail.module.scss'
 import { useObserver } from "mobx-react-lite"
 import useStore from '../../util/useStore'
+
 const Detail:React.FC=()=>{
     let history=useHistory();
     const back=()=>{
@@ -15,23 +16,23 @@ const Detail:React.FC=()=>{
     useEffect(() => {
         Detail.getDetailData()
     }, [Detail])
+    useEffect(() => {
+        Detail.getStoreData()
+    }, [Detail])
     return useObserver(()=>(
-        <div>
-      <div>
-     <p onClick={()=>back()} className={style.back}>{"<"}</p>
-      </div>
+        <div className={style.detail}>
+      
       <div className={style.container}>
-      <div className={style.first}>
-                    {/* {
-                      Detail.DetailList.data.map((item, index) => {
-                            return <div className={style.picture} key={index}>
-                      <p>{DetailList.data&&DetailList.data.list_pic_url}</p>
-                            </div>
-                        })
-                    } */}
-                </div>
+     <p onClick={()=>back()} className={style.back}>{"<"}</p>
+      <div className={style.title}>{ Detail.DetailList&&Detail.DetailList.name}</div>
       </div>
+      <div className={style.img}><img src={Detail.DetailList&&Detail.DetailList.list_pic_url} alt=""/></div>
+    <div className={style.simple_desc}>{Detail.DetailList&&Detail.DetailList.simple_desc}</div>
+    <div>
+
     </div>
+    </div>
+    
     ))
     
 }

@@ -10,3 +10,11 @@ export function getDetailData(id:string) {
         
     })
 }
+export function getStoreData(brandid:string) {
+    return   request({
+        url: '/goods/list',
+        method: 'get',
+        params:{brandid}
+        
+    })
+}
