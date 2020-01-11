@@ -30,9 +30,7 @@ class LoginStore {
         }
 
         let res = await login(params)
-        // console.log(res)
         this.jump = res.data
-        // console.log(res.data)
 
     }
 }

@@ -4,7 +4,6 @@ import { useObserver } from "mobx-react-lite"
 import style from "../../scss/collection.module.scss"
 
 const Collection:React.FC<any>=(props)=>{
-    // let size=1000
     let store = useStore();
     let { collection } = store
     useEffect(()=>{
@@ -39,17 +38,3 @@ const Collection:React.FC<any>=(props)=>{
 export default Collection;
 
 
-// import React from 'react'
-// import useStore from '../../util/useStore'
-// import { useObserver } from "mobx-react-lite"
-
-
-// const Collection:React.FC=()=>{
-//     return useObserver(()=>(
-//     <div>
-//          收藏
-//     </div>
-//     ))
-     
-// }
-// export default Collection;

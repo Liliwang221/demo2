@@ -1,7 +1,8 @@
 
 interface Login {
-    mobile: string
-    password:string
+    mobile: string,
+    password:string,
+    sessionKey:object
 }
 
 export interface LoginType {

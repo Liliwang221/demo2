@@ -6,7 +6,7 @@ import {XHRType} from './type'
 const instance = axios.create({
     baseURL: 'http://127.0.0.1:8888',
     timeout: 3000,
-    headers: {'X-Custom-Header':localStorage.getItem("token") }
+    headers: {'X-Custom-Header':localStorage.getItem("token")}
 });
 
 // 请求拦截器
