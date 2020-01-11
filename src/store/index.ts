@@ -4,10 +4,14 @@ import Login from './Login'
 import Home from './Home'
 import Special from './special'
 import Detail from './detail'
+import OnlyDetail from './onlyDetail'
 import Classify from './classify';
 import Interesting from "./module/interest"
 import Shangpin from "./module/interest"
 import Collection from "./module/collection"
+import Address from "./module/address"
+
+
 export default {
     cart:new Cart(),
     Login:new Login(),
@@ -17,5 +21,7 @@ export default {
     classify:new Classify(),
     interesting:new Interesting(),
     shangpin:new Shangpin(),
-    collection:new Collection()
+    collection:new Collection(),
+    OnlyDetail:new OnlyDetail(),
+    address:new Address()
 }

@@ -1,7 +1,8 @@
 import React, { useEffect } from 'react'
 import styleHome from '../main/home.module.scss'
+// import { Carousel } from 'antd'
 // import useState from '../../util/useStore'
-
+import { Carousel} from 'antd-mobile';
 import { useObserver } from "mobx-react-lite"
 import useStore from '../../util/useStore'
 let Home: React.FC<any> = (props) => {
@@ -13,13 +14,48 @@ let Home: React.FC<any> = (props) => {
     const detail=(id:string)=>{
         console.log(id)
         localStorage.setItem('id',id)
+       
+        props.history.push('./detail')
+    }
+    const details=(brandid:string)=>{
+        console.log(brandid)
+        localStorage.setItem('brandid',brandid)
+       
         props.history.push('./detail')
     }
     return useObserver(() => (
         <div className={styleHome.home}>
             {/* 轮播图系列 */}
             <div className={styleHome.img}>
-                <img src="http://yanxuan.nosdn.127.net/65091eebc48899298171c2eb6696fe27.jpg" alt="" />
+            <div className={styleHome.banner}>
+            
+            <Carousel
+                style={{ height: '3.99rem' }}
+                autoplay={true}
+                dots
+                autoplayInterval={1500}
+                infinite
+            >
+                {
+                    Home.data.banner.map(val => (
+                        // eslint-disable-next-line jsx-a11y/anchor-is-valid
+                        <a
+                            key={val.id}
+                            href="#"
+                            style={{ display: 'inline-block', width: '100%', height: '10rem' }}
+                        >
+                            <img
+                                src={val.image_url}
+                                alt=""
+                                style={{ width: '100%', verticalAlign: 'top', height: '10rem', zIndex: 99 }}
+                            />
+                        </a>
+                    )
+                    )
+                }
+            </Carousel>
+        
+    </div>
             </div>
             {/* 雪碧图系列 */}
             <div className={styleHome.contain}>
@@ -41,7 +77,7 @@ let Home: React.FC<any> = (props) => {
                     {
                         Home.data.brandList.map((item, index) => {
                             return <div className={styleHome.secondPictureRoot} key={index} onClick={()=>{detail(item.id)}}>
-                                <img src={item.new_pic_url} alt="" />
+                                <img src={item.new_pic_url} alt=""  onClick={()=>{details(item.brandid)}}/>
                                 <div className={styleHome.secondList}>
                                     <p>{item.name}</p>
                                     <p>{item.floor_price}元起</p>

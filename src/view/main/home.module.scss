@@ -1,43 +1,62 @@
-.home{
+.home {
     width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
     // overflow: scroll;
-    overflow-x:hidden ;
+    overflow-x: hidden;
     // overflow: auto;
     background: rgba(236, 234, 234, 0.973);
 }
-.img img{
+
+.banner {
     width: 100%;
-    height: 12rem;
+    height: 10rem;
+    img {
+        width: 100%;
+        height: 10rem;
+    }
+    .carousel {
+        height: 10rem;
+        ul {
+            height: 10rem;
+        }
+    }
 }
-.first{
+
+// .img img{
+//     width: 100%;
+//     height: 12rem;
+// }
+.first {
     width: 100%;
     height: 5.6em;
     background: #fff;
     display: flex;
     // flex-direction: column;
 }
-.pictureRoot img{
+
+.pictureRoot img {
     width: 2.0em;
     height: 2.0em;
 }
-.picture{
+
+.picture {
     margin: 23px;
 }
-.pictureName{
-  margin-left: 3px;
-  font-size: 12px;
+
+.pictureName {
+    margin-left: 3px;
+    font-size: 12px;
 }
+
 // e{
 //  width: 100%;
 //  height: 3.2rem;
-
 //  padding-left: 7.6rem;
 //  padding-top: 1.2rem;
 // }
-.secondName{
+.secondName {
     height: 3rem;
     background: #fff;
     text-align: center;
@@ -45,49 +64,55 @@
     line-height: 3rem;
     font-weight: 700;
 }
-.secondPicture{
+
+.secondPicture {
     width: 100%;
     height: 15rem;
-   display: flex;
-  flex-wrap: wrap;
-
+    display: flex;
+    flex-wrap: wrap;
 }
-.secondPictureRoot img{
+
+.secondPictureRoot img {
     // width: 21em;
     width: 100%;
     height: 100%;
     max-height: 12em;
-    
-   
 }
-.secondPictureRoot{
+
+.secondPictureRoot {
     width: 11.7rem;
     display: flex;
     max-height: 10rem;
     flex-wrap: wrap;
     position: relative;
 }
-.secondList{
+
+.secondList {
     position: absolute;
     top: .4rem;
     left: .4rem;
 }
-.secondList p:nth-child(1){
+
+.secondList p:nth-child(1) {
     font-size: 1rem;
     font-weight: 500;
 }
-.secondList p:nth-child(2){
+
+.secondList p:nth-child(2) {
     font-size: .8em;
     color: #ccc;
 }
-.newGoodBox{
+
+.newGoodBox {
     background: #fff;
 }
-.newGoodWrap{
+
+.newGoodWrap {
     display: flex;
     flex-wrap: wrap;
 }
-.newGoodTitle{
+
+.newGoodTitle {
     height: 3rem;
     background: #fff;
     text-align: center;
@@ -95,27 +120,33 @@
     line-height: 3rem;
     font-weight: 700;
 }
-.newGoodItem{
+
+.newGoodItem {
     width: 50%;
     height: 12rem;
 }
-.newGoodItem img{
+
+.newGoodItem img {
     width: 100%;
     height: 70%;
 }
-.newGoodName{
+
+.newGoodName {
     margin-left: 1.5em;
 }
-.newGoodPrice{
+
+.newGoodPrice {
     margin-left: 4.2em;
     color: red;
     font-weight: 400;
 }
-.hotGoodBox{
+
+.hotGoodBox {
     margin-top: 0.8em;
     background: #fff;
 }
-.hotGoodTitle{
+
+.hotGoodTitle {
     height: 3rem;
     background: #fff;
     text-align: center;
@@ -124,47 +155,57 @@
     font-weight: 700;
     border-bottom: 1px solid #888;
 }
-.hotGoodWrap{
+
+.hotGoodWrap {
     width: 100%;
     padding: 0 .8rem;
     min-height: 200px;
 }
-.hotGoodItem{
+
+.hotGoodItem {
     height: 8rem;
     position: relative;
     padding: .3rem 0;
     display: flex;
     border-bottom: 1px solid #888;
 }
-.hotGoodItem img{
+
+.hotGoodItem img {
     width: auto;
     height: 100%;
 }
-.hotGoodList{
+
+.hotGoodList {
     flex: 1 1;
     padding: 1rem 0;
 }
-.hotGoodList p{
+
+.hotGoodList p {
     padding: .5rem 0;
 }
-.hotGoodList p:nth-child(1){
+
+.hotGoodList p:nth-child(1) {
     font-weight: 500;
     font-size: 1rem;
 }
-.hotGoodList p:nth-child(2){
+
+.hotGoodList p:nth-child(2) {
     font-weight: 300;
     font-size: 1rem;
 }
-.hotGoodList p:nth-child(3){
+
+.hotGoodList p:nth-child(3) {
     font-weight: 300;
     font-size: 1rem;
     color: red;
 }
-.topGoodBox{
+
+.topGoodBox {
     margin-top: 0.8em;
     background: #fff;
 }
-.topGoodTitle{
+
+.topGoodTitle {
     height: 3rem;
     background: #fff;
     text-align: center;
@@ -173,14 +214,16 @@
     font-weight: 700;
     border-bottom: 1px solid #888;
 }
-.topGoodWrap{
+
+.topGoodWrap {
     width: 100%;
     padding: 0 .8rem;
     min-height: 200px;
     display: flex;
     overflow-x: auto;
 }
-.topGoodItem{
+
+.topGoodItem {
     height: 12rem;
     position: relative;
     padding: .2rem 0;
@@ -188,11 +231,13 @@
     // display: flex;
     // border-bottom: 1px solid #888;
 }
-.topGoodItem img{
+
+.topGoodItem img {
     width: auto;
     height: 100%;
 }
-.topGoodList p:nth-child(2){
+
+.topGoodList p:nth-child(2) {
     max-width: 400px;
     overflow: hidden;
     // background: #999;
@@ -201,60 +246,79 @@
     font-size: 1rem;
     color: #888;
 }
-.topGoodName{
+
+.topGoodName {
     font-size: 1.2rem;
     font-weight: 500;
 }
-.topGoodPrice{
+
+.topGoodPrice {
     font-size: 1.2rem;
     color: red;
     margin-left: 0.5em;
 }
-.cateGoodBox{
+
+.cateGoodBox {
     background: #fff;
 }
-.cateGoodItem{
+
+.cateGoodItem {
     display: flex;
     flex-wrap: wrap;
 }
-.cateItemList{
+
+.cateItemList {
     display: flex;
     flex-wrap: wrap;
 }
-.cateGoodTitle{
+
+.cateGoodTitle {
     height: 3rem;
     text-align: center;
     width: 100%;
     line-height: 3rem;
     background: #f0f0f0;
 }
-.cateGoodListItem{
-    width: 45%;
-    height: auto;
-    background: #fff;
-    padding: .5rem;
-   
 
-}
-.cateGoodListItem .cateGoodImg img{
-width: 100%;
-height: auto;
-}
-.cateLast{
+.cateGoodListItem {
     width: 45%;
     height: auto;
     background: #fff;
     padding: .5rem;
-   
 }
-.cateLast p:nth-child(1){
+
+.cateGoodListItem .cateGoodImg img {
+    width: 100%;
+    height: auto;
+}
+
+.cateLast {
+    width: 45%;
+    height: auto;
+    background: #fff;
+    padding: .5rem;
+}
+
+.cateLast p:nth-child(1) {
     width: 100%;
     text-align: center;
     margin-top: 3.5em;
 }
-.cateLast p:nth-child(2) img{
+
+.cateLast p:nth-child(2) img {
     padding: 1rem;
     height: 2em;
     width: 2rem;
     margin-left: 3rem;
 }
+
+// .ant-carousel .slick-slide {
+//     text-align: center;
+//     height: 160px;
+//     line-height: 160px;
+//     background: #364d79;
+//     overflow: hidden;
+//   }
+//   .ant-carousel .slick-slide h3 {
+//     color: #fff;
+//   }

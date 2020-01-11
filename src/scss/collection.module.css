@@ -29,6 +29,7 @@
 :local .collection main {
   width: 100%;
   flex-grow: 1;
+  overflow-y: auto;
 }
 
 :local .collection main .wrapper {
@@ -40,7 +41,6 @@
 :local .collection main .wrapper img {
   width: 105px;
   height: 105px;
-  border: 1px solid #ccc;
 }
 
 :local .collection main .wrapper .boxs {

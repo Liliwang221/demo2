@@ -6,11 +6,12 @@ import "../../font_z6duoo2hps/iconfont.css"
 import "../../icon图标淘宝/font_5rhyeqzz879/iconfont.css"
 
 const My:React.FC<any>=(props)=>{
-
     let chpucangFn=()=>{
         props.history.push("/collection")
     }
-
+    let addressClickFn=()=>{
+        props.history.push("/address")
+    }
     return useObserver(()=>(
         <div className={style.my}>
             {/* 头像和用户信息 */}
@@ -29,7 +30,7 @@ const My:React.FC<any>=(props)=>{
                     <span className="iconfont">&#xe824;</span>
                     <p>收藏</p>
                 </div>
-                <div className={style.txt}>
+                <div className={style.txt} onClick={()=>addressClickFn()}>
                     <span className="iconfont">&#xe848;</span>
                     <p>地址</p>
                 </div>

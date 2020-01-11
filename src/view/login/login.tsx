@@ -1,18 +1,22 @@
-import React,{useEffect} from 'react'
+import React from 'react'
 import style from '../login/login.module.scss'
 import { useObserver } from "mobx-react-lite"
 import {useHistory} from 'react-router-dom'
 import useStore from '../../util/useStore'
+// import { login } from '../../api/login'
+// import { login } from '../../api/login'
 
 const Login:React.FC=()=>{
   let store = useStore();
   let { Login } = store;
 
    let history=useHistory();
+   
    const jump=()=>{
       Login.login()
      if (Login.jump && Object.values(Login.jump).length > 0) {
       history.push('/main/home')
+      localStorage.setItem("token",Login.jump.sessionKey)
     } else {
       alert("您输入的信息有误！")
     }

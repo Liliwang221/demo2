@@ -10,6 +10,7 @@ export default class Collection {
     @action
     async getCollectionList(params:object){
         let res=await getCollectionList(params)
-        console.log(res)
+        console.log(res.data)
+        this.list=res.data
     }
 }

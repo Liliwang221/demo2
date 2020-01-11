@@ -6,11 +6,12 @@ import {XHRType} from './type'
 const instance = axios.create({
     baseURL: 'http://127.0.0.1:8888',
     timeout: 3000,
-    headers: {'X-Custom-Header':localStorage.getItem("token")}
+   
 });
 
 // 请求拦截器
 instance.interceptors.request.use(function (config) {
+  config.headers['x-nideshop-token'] =localStorage.getItem("token")
     // Do something before request is sent
     return config;
   }, function (error) {

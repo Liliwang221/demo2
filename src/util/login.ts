@@ -1,13 +1,12 @@
 
 interface Login {
-    mobile: string,
-    password:string,
-    sessionKey:object
+    mobile: string
+    password:string
 }
 
 export interface LoginType {
     data: Login[],
-
+    sessionKey:any
 }
 export interface XHRType {
     errno: number,

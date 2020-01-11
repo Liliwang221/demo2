@@ -25,6 +25,7 @@
         main {
             width: 100%;
             flex-grow: 1;
+            overflow-y: auto;
             .wrapper {
                 width: 100%;
                 padding: 10px;
@@ -32,7 +33,6 @@
                 img {
                     width: 105px;
                     height: 105px;
-                    border: 1px solid #ccc;
                 }
                 .boxs {
                     margin-left: 10px;

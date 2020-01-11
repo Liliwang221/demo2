@@ -10,7 +10,8 @@ class LoginStore {
     @observable pwd: string = "123456"
 
     @observable
-    jump: Object = {}
+    jump: any = {}
+ 
 
     @action
     changeUser(val: string) {
@@ -30,8 +31,11 @@ class LoginStore {
         }
 
         let res = await login(params)
+        console.log(res)
         this.jump = res.data
-
+       
+        // localStorage.setItem('token',res.data.sessionKey)
+  
     }
 }
 
