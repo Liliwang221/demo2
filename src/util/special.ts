@@ -1,6 +1,6 @@
 
 interface Type {
-    id: number
+    id: string,
     price_info: number
     scene_pic_url: string
     subtitle: string

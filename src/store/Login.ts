@@ -11,6 +11,7 @@ class LoginStore {
 
     @observable
     jump: Object = {}
+ 
 
     @action
     changeUser(val: string) {
@@ -30,8 +31,10 @@ class LoginStore {
         }
 
         let res = await login(params)
-        // console.log(res)
+        console.log(res)
+      
         this.jump = res.data
+        localStorage.setItem('token',res.data.sessionKey)
         // console.log(res.data)
 
     }

@@ -5,10 +5,11 @@ import { useObserver } from "mobx-react-lite"
 import useStore from '../../util/useStore'
 
 const Special:React.FC<any>=(props)=>{
-    const detailOnly=()=>{
+    const detailOnly=(id:string)=>{
+        console.log(id)
+        localStorage.setItem('id',id)
        
-       
-        props.history.push('../main/Only/only')
+        props.history.push('./Only/only')
     }
     let store = useStore();
     let { Special } = store
