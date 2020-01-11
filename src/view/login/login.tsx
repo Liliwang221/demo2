@@ -14,7 +14,7 @@ const Login:React.FC=()=>{
    
    const jump=()=>{
       Login.login()
-     
+    
      console.log(Login.login)
      if (Login.jump && Object.values(Login.jump).length > 0) {
       history.push('/main/home')

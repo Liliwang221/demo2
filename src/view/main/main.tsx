@@ -10,7 +10,7 @@ const Main: React.FC = (props: any) => {
             title: "首页"
         },
         {
-            path: '/main/only',
+            path: '/main/special',
             title: "专题"
         },
         {

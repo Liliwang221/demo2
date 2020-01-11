@@ -18,8 +18,8 @@ export default class DetailStore{
         this.id=localStorage.getItem('id')
         let res = await getOnlyData(this.id);
         console.log(res)
-        // this.OnlyList=res.data.brand
-        // console.log(res.data.brand)
+        this.OnlyList=res.data
+        console.log(res.data)
     }
   
 

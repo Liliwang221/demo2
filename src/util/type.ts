@@ -31,7 +31,7 @@ interface HotGoodsList{
     goods_brief: string
 }
 interface BrandList{
-    brandid: string;
+    brandId: string;
     id: string
     name: string
     list_pic_url: string

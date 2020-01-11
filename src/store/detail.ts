@@ -14,7 +14,7 @@ export default class DetailStore{
     @observable
       id:any
       @observable
-      brandid:any
+      brandId:any
     @action
     async getDetailData() {
         this.id=localStorage.getItem('id')
@@ -25,8 +25,8 @@ export default class DetailStore{
     }
     @action
     async getStoreData(){
-        this.brandid=localStorage.getItem('brandid')
-        let res=await getStoreData(this.brandid)
+        this.brandId=localStorage.getItem('brandid')
+        let res=await getStoreData(this.brandId)
         console.log(res)
         this.storeData=res.data.data
         console.log(res.data.data)

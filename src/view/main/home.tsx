@@ -17,9 +17,9 @@ let Home: React.FC<any> = (props) => {
        
         props.history.push('./detail')
     }
-    const details=(brandid:string)=>{
-        console.log(brandid)
-        localStorage.setItem('brandid',brandid)
+    const details=(brandId:string)=>{
+        localStorage.setItem('brandId',brandId)
+        console.log(brandId)
        
         props.history.push('./detail')
     }
@@ -77,7 +77,7 @@ let Home: React.FC<any> = (props) => {
                     {
                         Home.data.brandList.map((item, index) => {
                             return <div className={styleHome.secondPictureRoot} key={index} onClick={()=>{detail(item.id)}}>
-                                <img src={item.new_pic_url} alt=""  onClick={()=>{details(item.brandid)}}/>
+                                <img src={item.new_pic_url} alt=""  onClick={()=>{details(item.brandId)}}/>
                                 <div className={styleHome.secondList}>
                                     <p>{item.name}</p>
                                     <p>{item.floor_price}元起</p>
