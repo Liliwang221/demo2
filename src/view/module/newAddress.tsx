@@ -39,7 +39,7 @@ const NewAddress: React.FC = (props) => {
                         </Picker>
                     </List>
                 </div>
-
+ 
                 <div className={style.address}>
                     <input type="text" placeholder="详细地址" />
                 </div>
